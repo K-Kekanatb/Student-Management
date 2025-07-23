@@ -33,8 +33,7 @@ public class Student implements Serializable {
     public Student() {
     }
 
-    public Student(Long id, String name, Integer age, Integer studNumber) {
-        this.id = id;
+    public Student(String name, Integer age, Integer studNumber) {
         this.name = name;
         this.age = age;
         this.studNumber = studNumber;
