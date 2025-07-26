@@ -9,9 +9,18 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>View Students Page</title>
     </head>
     <body>
-        <h1>Hello World!</h1>
+        <h1>View Students</h1>
+        <p>
+            Click the button below to view
+        </p>
+        <form action="ViewServlet" method="GET">
+            <ul>
+                <li><input type="submit" value="View"></li>
+            </ul>
+        </form>
+            
     </body>
 </html>

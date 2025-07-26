@@ -7,6 +7,7 @@ package za.ac.tut.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.ejb.EJB;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,22 +21,17 @@ import za.ac.tut.entity.bl.StudentFacadeLocal;
  *
  * @author khuts
  */
-public class AddStudentServlet extends HttpServlet {
+public class ViewServlet extends HttpServlet {
 
     @EJB StudentFacadeLocal sfl;
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String name = request.getParameter("name");
-        Integer age = Integer.parseInt(request.getParameter("age"));
-        Integer studNumber = Integer.parseInt(request.getParameter("studNumber"));
-        
-        Student student = new Student(name, age, studNumber);
-        sfl.create(student);
+        List<Student> student = sfl.findAll();
         
         request.setAttribute("student", student);
         
-        RequestDispatcher rd = request.getRequestDispatcher("add_student_outcome.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("view_student_outcome.jsp");
         rd.forward(request, response);
     }
 
