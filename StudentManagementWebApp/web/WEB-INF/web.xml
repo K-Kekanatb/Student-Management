@@ -8,6 +8,18 @@
         <servlet-name>ViewServlet</servlet-name>
         <servlet-class>za.ac.tut.controller.ViewServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>FindServlet</servlet-name>
+        <servlet-class>za.ac.tut.controller.FindServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditServlet</servlet-name>
+        <servlet-class>za.ac.tut.controller.EditServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>EditFinalServlet</servlet-name>
+        <servlet-class>za.ac.tut.controller.EditFinalServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>AddStudentServlet</servlet-name>
         <url-pattern>/AddStudentServlet</url-pattern>
@@ -15,6 +27,18 @@
     <servlet-mapping>
         <servlet-name>ViewServlet</servlet-name>
         <url-pattern>/ViewServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>FindServlet</servlet-name>
+        <url-pattern>/FindServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditServlet</servlet-name>
+        <url-pattern>/EditServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>EditFinalServlet</servlet-name>
+        <url-pattern>/EditFinalServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
